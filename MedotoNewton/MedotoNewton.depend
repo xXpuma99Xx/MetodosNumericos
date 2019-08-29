@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1567088760 source:/home/puma99/Git/Programas/c/fes/MetodosNumericos/MedotoNewton/tabla.c
+	<stdio.h>
+	<string.h>
+

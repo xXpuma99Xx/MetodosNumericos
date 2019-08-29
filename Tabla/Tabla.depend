@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1567071056 source:/home/puma99/Git/Programas/c/fes/MetodosNumericos/Tabla/main.c
+	<stdio.h>
+
+1567071437 source:/home/puma99/Git/Programas/c/fes/MetodosNumericos/Tabla/tabla.c
+	<stdio.h>
+	<string.h>
+
+1567065027 /home/puma99/Git/Programas/c/fes/MetodosNumericos/Tabla/libreria.h
+	<stdio.h>
+	<math.h>
+
