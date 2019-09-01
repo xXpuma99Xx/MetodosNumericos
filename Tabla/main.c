@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+//funciones de la libreria tabla
 void imprimirFinLinea(int caso);
 void imprimirLinea(int caso, int cantidad);
 void imprimirHeader(char texto[]);
@@ -8,78 +9,82 @@ void imprimirCelda(double dato);
 void imprimirNumeral(int iteraciones);
 void imprimirNumero(int iteraciones, int iteracion);
 void imprimirLineaNumero(int caso, int iteraciones);
+
+//Funciones propias de main
+void imprimirResultados(int iteraciones,int iteracion/*, <demas parametros a imprimir*/);
 double funcion(double x);
 
 int main(){
-    double a, b, p, fa, fb, fp;
+    //variables de los datos
+    //double ;
+    //iteraciones = iterariones a realizer      i = iterarodr
     int iteraciones,i;
 
+    //Iteraciones que el usuario desea imprimir
     printf("Cuantas iteraciones quieres? ");
     scanf("%i",&iteraciones);
 
+    //datos a pedir del usuario como parametro inicial
+    /*
     printf("Parametro inicial A: ");
     scanf("%lf",&a);
     printf("Parametro inicial B: ");
     scanf("%lf",&b);
-    system("cls");
-
-
+    */
+    system("clear");
 
     imprimirCabecera(iteraciones);
-
     for(i = 1;i <= iteraciones;i++){
-        p = (a+b)/2;
-        fp = funcion(p);
+        //bloque para asignar datos
 
-        imprimirResultados(iteraciones,i,a,b,p,fa,fb,fp);
 
-        if((fa*fp) < 0){
-            b = p;
-            fb = fp;
-        }else if((fb*fp) < 0){
-            a = p;
-            fa = fp;
-        }
+        //imprimir datos del bloque de asignacion
+        imprimirResultados(iteraciones,i/*,<demas parametros a imprimir>*/);
+
+        //actualizacion de datos
+
     }
 
     return 0;
 }
 
-
+//Funcion a resolver
+/*
 double funcion(double x){
-    return (((x+1)*x-4)*x-1);
-}
+    return <funcion>;
+}*/
+//Posibles funciones extra a necesitar
 
-void imprimirResultados(int iteraciones,int iteracion,double a, double b, double p, double fa, double fb, double fp){
+
+
+//seccion de impresion de la tabla
+void imprimirResultados(int iteraciones,int iteracion/*, <demas parametros a imprimir*/){
     imprimirNumero(iteraciones, iteracion);
 
-    imprimirCelda(a);
-    imprimirCelda(b);
-    imprimirCelda(fa);
-    imprimirCelda(fb);
-    imprimirCelda(p);
-    imprimirCelda(fp);
+    //impresion de celda con valores de la iteracion
+    //imprimirCelda(<valor>);
+
 
     imprimirFinLinea(3);
 
     imprimirLineaNumero(1,iteraciones);
-    imprimirLinea(1,6);
+    //imprimirLinea(1,<numero de celdas que hay>);
     imprimirFinLinea(3);
 }
 
 void imprimirCabecera(int iteraciones){
     imprimirLineaNumero(2,iteraciones);
-    imprimirLinea(2,6);//segundo parametro indica cuantas cabeceras debe habers
+    //imprimirLinea(2,<numero de celdas que hay>);
     imprimirFinLinea(2);
 
     imprimirNumeral(iteraciones);
 
-    /*Parte que debe dar manualmente el programador para impirmir sus cabeceras*/
-
+    //Impresion de cabeceras
+    //imprimirHeader("<texto deseado para la cabecera>");
 
     imprimirFinLinea(3);
 
     imprimirLineaNumero(1,iteraciones);
-    imprimirLinea(1,6);
+    //imprimirLinea(1,<numero de celdas que hay>);
     imprimirFinLinea(1);
 }

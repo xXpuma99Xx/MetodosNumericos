@@ -53,57 +53,62 @@ void imprimirHeader(char texto[]){
             break;
         case 6:printf("|      %s      ",texto);
             break;
+        case 7:printf("|     %s      ",texto);
+            break;
+        case 8:printf("|     %s     ",texto);
+            break;
+        case 9:printf("|    %s     ",texto);
+            break;
+        case 10:printf("|    %s    ",texto);
+            break;
+        case 11:printf("|    %s   ",texto);
+            break;
+        case 12:printf("|   %s   ",texto);
+            break;
+        case 13:printf("|   %s  ",texto);
+            break;
+        case 14:printf("|  %s  ",texto);
+            break;
+        case 15:printf("|  %s ",texto);
+            break;
+        case 16:printf("| %s ",texto);
+            break;
+        case 17:printf("| %s",texto);
+            break;
+        case 18:printf("|%s",texto);
+            break;
         default:printf("Necesito agregar caso.");
     }
 }
 
 void imprimirCelda(double dato){
     if(dato < 0){
-        if(dato > -10){
-            printf("|  %.13lf",dato);
-        }else if(dato > -100){
-            printf("| %.13lf",dato);
-        }else {
-            printf("|%.13lf",dato);
-        }
+        if(dato > -10) printf("|  %.13lf",dato);
+        else if(dato > -100) printf("| %.13lf",dato);
+        else printf("|%.13lf",dato);
+
     }else{
-        if(dato < 10){
-            printf("|   %.13lf",dato);
-        }else if(dato < 100){
-            printf("|  %.13lf",dato);
-        }else {
-            printf("| %.13lf",dato);
-        }
+        if(dato < 10) printf("|   %.13lf",dato);
+        else if(dato < 100) printf("|  %.13lf",dato);
+        else printf("| %.13lf",dato);
     }
 }
 
 void imprimirNumeral(int iteraciones){
-    if(iteraciones < 10){
-        printf("| # ");
-    }else if(iteraciones < 100){
-        printf("|  # ");
-    }else if(iteraciones < 1000){
-        printf("|  #  ");
-    }
+    if(iteraciones < 10) printf("| # ");
+    else if(iteraciones < 100) printf("|  # ");
+    else if(iteraciones < 1000) printf("|  #  ");
 }
 
 void imprimirNumero(int iteraciones, int iteracion){
-    if(iteraciones < 10){
-        printf("| %i ",iteracion);
-    }else if(iteraciones < 100){
-        if(iteracion < 10){
-            printf("|  %i ",iteracion);
-        }else if(iteracion < 100){
-            printf("| %i ",iteracion);
-        }
+    if(iteraciones < 10) printf("| %i ",iteracion);
+    else if(iteraciones < 100){
+        if(iteracion < 10) printf("|  %i ",iteracion);
+        else if(iteracion < 100) printf("| %i ",iteracion);
     }else if(iteraciones < 1000){
-        if(iteracion < 10){
-            printf("|  %i  ",iteracion);
-        }else if(iteracion < 100){
-            printf("|  %i ",iteracion);
-        }else if(iteracion < 1000){
-            printf("| %i ",iteracion);
-        }
+        if(iteracion < 10) printf("|  %i  ",iteracion);
+        else if(iteracion < 100) printf("|  %i ",iteracion);
+        else if(iteracion < 1000) printf("| %i ",iteracion);
     }
 }
 
@@ -129,9 +134,7 @@ void imprimirLineaNumero(int caso, int iteraciones){
             case 2:printf("______");
                 break;
         }
-    }
-
-    else{
+    }else{
         printf("Agregar nuevo parametro");
     }
 }
