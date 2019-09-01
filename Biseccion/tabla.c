@@ -32,7 +32,6 @@ void imprimirLinea(int caso, int cantidad){
             break;
         default:printf("Necesito agregar caso.");
     }
-
 }
 
 void imprimirHeader(char texto[]){
