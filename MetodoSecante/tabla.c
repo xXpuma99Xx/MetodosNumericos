@@ -143,3 +143,4 @@ void imprimirNumero(int iteraciones, int iteracion){
         else if(iteracion < 1000) printf("| %i ",iteracion);
     }
 }
+

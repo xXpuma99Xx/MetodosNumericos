@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1568437161 source:/home/puma99/Programas/c/MetodosNumericos/MetodoSecante/tabla.c
+	<stdio.h>
+	<string.h>
+
+1568437152 source:/home/puma99/Programas/c/MetodosNumericos/MetodoSecante/main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
